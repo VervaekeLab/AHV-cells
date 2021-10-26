@@ -1,0 +1,44 @@
+The main model is singleNeuronClassifier
+
+An example is shown in runExample.m
+
+
+...
+
+function results = singleNeuronClassifier(spikes, predictors, infoPredictors,trialNo, setup, varargin)
+
+% Input structure (required)
+%   spikes          : N x T-matrix                     - signal 
+%   predictors      : 1 x #Behavior cell array         - behaviors 
+%   infoPredictors  : 1 x #Behavior cell array of char - name of covariates 
+%   trialNo         : 1 x T vector                     - trial numbers 
+%
+% Input (optional)
+%   predNameSelect  : 1 x #Tests cell array of cells      - combination testing 
+%                     example = { {'None'}, {'Place'}, {'Speed'}, {'Place','Speed'} }
+%
+% Example
+%    spikes          = sData.imdata.roiArray(2).dff
+%    predictors      = { sData.behavior.wheelPosDs, sData.behavior.speed }
+%    infoPredictors  = { 'Place','Speed' }
+%    trialNo         = sData.trialNo
+%    results = singleNeuronClassifier(spikes, predictors, infoPredictors,trialNo)
+%
+% Output structure
+%
+%   results
+%   .tag
+%   .sessionID
+%   .sessionMeta
+%   .testPredictors( testnum )
+%      .predictorName
+%      .outputLNP( fold )
+%   .compareTwoTests ( comparenum )
+%      .two_test_idx
+%      .two_test_name
+%      .pWilcox
+%      .hWilcox
+%      .statsWilcox );
+%   .logLiTrain
+%   .logLiTest
+
