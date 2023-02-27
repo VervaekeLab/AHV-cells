@@ -58,6 +58,6 @@ function trialInfo = getTrialInfo(angularFramePosition)
 
      [trialInfo(:).isTrialFinished] = deal(false);
      [trialInfo(:).imageDrift] = deal([nan, nan]);
-     [trialInfo(:).angularSamplingDelay] = dean(nan);
+     [trialInfo(:).angularSamplingDelay] = deal(nan);
 %     [trialInfo(:).rotationCenterOffset] = deal([nan, nan]); % Todo
 end

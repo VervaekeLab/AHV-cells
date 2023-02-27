@@ -1,5 +1,5 @@
-function alignRotationStack(imageData, derotationAngles, options)
-%alignRotationStack Align a stack where images are rotated.
+function alignRotationRecording(imageData, derotationAngles, options)
+%alignRotationRecording Align a stack where images are rotated.
 %
 %   INPUTS:
 %       imageData : A memory-mapped stack or an image array (height, width, n). 
